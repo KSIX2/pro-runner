@@ -227,7 +227,7 @@ function cageAnimation(){
 cageAnimation();
 
 function checkCrash(){
-    if(lowerTrack[lowerTrack.length - 9].x - gamepiece.x < 70 && gamepiece.y === cheight/2 + 80){
+    if(lowerTrack[lowerTrack.length - 9].x - gamepiece.x <= 5 && gamepiece.y === cheight/2 + 80){
         if(lowerTrack[lowerTrack.length - 9].color === "#FFE800"){
             score.innerHTML = `Your score : ${Math.floor((framenum-30)/15)}`;
             high.innerHTML = `High score : ${highScore}`;
@@ -238,7 +238,7 @@ function checkCrash(){
     }
 
     if(lowerTrack[lowerTrack.length - 10].color === "#FFE800" && lowerTrack[lowerTrack.length - 9].color === "black" && gamepiece.y === cheight/2 + 80){
-        if(lowerTrack[lowerTrack.length - 9].x > 0){
+        if(lowerTrack[lowerTrack.length - 9].x > 220){
             score.innerHTML = `Your score : ${Math.floor((framenum-30)/15)}`;
             high.innerHTML = `High score : ${highScore}`;
             canvas.style.filter = "blur(5px)";
@@ -247,7 +247,7 @@ function checkCrash(){
         }
     }
 
-    if(upperTrack[upperTrack.length - 9].x - gamepiece.x < 70 && gamepiece.y === cheight/2 - 130){
+    if(upperTrack[upperTrack.length - 9].x - gamepiece.x <= 5 && gamepiece.y === cheight/2 - 130){
         if(upperTrack[upperTrack.length - 9].color === "#FFE800"){
             score.innerHTML = `Your score : ${Math.floor((framenum-30)/15)}`;
             high.innerHTML = `High score : ${highScore}`;
@@ -258,7 +258,7 @@ function checkCrash(){
     }
 
     if(upperTrack[upperTrack.length - 10].color === "#FFE800" && upperTrack[upperTrack.length - 9].color === "black" && gamepiece.y === cheight/2 - 130){
-        if(upperTrack[upperTrack.length - 9].x > 0){
+        if(upperTrack[upperTrack.length - 9].x > 220){
             score.innerHTML = `Your score : ${Math.floor((framenum-30)/15)}`;
             high.innerHTML = `High score : ${highScore}`;
             canvas.style.filter = "blur(5px)";
