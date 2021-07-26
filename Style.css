@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#left{
+    background: #FFE800;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    position: relative;
+    z-index: 1;
+}
+
+#right {
+    background: black;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    position: relative;
+    padding: 183px;
+    z-index: 1;
+}
+
+#gameName {
+    font-family: Faster One;
+    font-size: 110px;
+    text-align: start;
+    animation-name: null;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+#play {
+    font-family: Shojumaru;
+    color: #FFE800;
+    font-size: 80px;
+    text-align: center;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+#play:hover{
+    color: darkgoldenrod;
+    cursor: pointer;
+}
+
+#gameCanvas{
+    position: relative;
+    background: #FFE800;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 0;
+}
+
+#modal {
+    display: none;
+    position: relative;
+    left: 450px;
+    top: 170px;
+    width: 500px;
+    height: 325px;
+    background: white;
+    border: solid black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    z-index: 3;
+    animation-name: modalAppear;
+    animation-duration: 1s;
+}
+
+p {
+    font-family: Shojumaru;
+    font-size: 30px;
+    text-align: center;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: Shojumaru;
+    font-size: 30px;
+    background: #FFE800;
+    color: black;
+    border: solid black;
+    border-radius: 25px;
+}
+
+button:hover{
+    background: black;
+    color: #FFE800;
+    cursor: pointer;
+}
+
+@keyframes disappearAnimation {
+    0%{
+        opacity: 1;
+      }
+    25%{
+        opacity: 0.95;
+    }
+    100%{
+        opacity: 0;
+      }
+}
+
+@keyframes modalAppear {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    25%{
+        width: 125px;
+        height: 82;
+    }
+    50%{
+        width: 250px;
+        height: 164px;
+    }
+    100%{
+        width: 500px;
+        height: 325px;
+    }
+}
+
+
+
+
